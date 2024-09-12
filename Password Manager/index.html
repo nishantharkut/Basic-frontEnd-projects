@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pwd Manager</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav>
+        <img src="./Assets/key-svgrepo-com.svg" alt="logo">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Login/Sign Up</li>
+        
+      </ul>
+    </nav>
+    <div class="container">
+      <h1>Pwd - Your Password Manager</h1>
+      <p>
+        Welcome to PWD, your most secure and reliable password manager.<br />Store
+        all your passwords in all in one secured place.
+      </p>
+      <h2>Your Passwords</h2>
+      <table>
+          <tr>
+              <th>Name</th>
+              <th>Type of Account</th>
+              <th>Id</th>
+              <th>Password</th>
+          </tr>
+          <tr>
+              <td>Nishant</td>
+              <td>Personal</td>
+              <td>nhnishantharkut@gmail.com</td>
+              <td></td>
+          </tr>
+      </table>
+      <h2>Add a Password</h2>
+      <form action="/submit" method = "post">
+        <label for="username">Name</label>
+        <input type="text" name="username" id="username" required>
+        <br>
+        <label for="type">Type of Account</label>
+        <input type="text" name="type" id="type">
+        <br>
+        <label for="id">Id</label>
+        <input type="text" name="Id" id="Id" required>
+        <br>
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <br>
+        <button type="submit" >Add </button>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

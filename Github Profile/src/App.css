@@ -1,0 +1,82 @@
+/* .App {
+  text-align: center;
+} */
+
+/* .App-logo {
+  height: 20vmin;
+  pointer-events: none;
+} */
+
+/* @media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+} */
+
+  html, body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  }
+  
+  .App-header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  
+  h1, h2 {
+    font-weight: normal;
+    z-index: 1;
+    border-radius: 30px;
+    vertical-align: middle;
+  }
+  
+  /* Name */
+  
+  h1 {
+    font-size: calc(40px + 2vmin);
+    margin-top: 0vh;
+    margin-bottom: 1vh;
+    color: #eeeeee;
+  }
+  
+  img {
+    vertical-align: middle;
+    border-radius: 25%;
+  }
+  
+  /* Title */
+  
+  h5 {
+    font-size: calc(30px + 2vmin);
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    color: #bbbbbb;
+  }
+  
+  
+  /* Particles */
+  
+  #particles-js {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50% 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  

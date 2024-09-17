@@ -11,7 +11,7 @@
   box-sizing: border-box;
 }
 
-body {
+html, body {
   background: url(../Assets/background.jpg) no-repeat center center fixed;
   background-size: cover;
   background-position: center;
@@ -119,15 +119,17 @@ a{
   justify-content: center;
   align-items: center;
 }
-.wrapper .form-box{
-  width:100%;
+.wrapper .form-box {
+  width: 100%;
   padding: 40px;
+  padding-bottom: 5px;
 }
 
 .form-box h2{
   font-size: 2em;
-  color: greenyellow;
+  color: rgba(2, 63, 2, 0.703);
   text-align: center;
+  font-weight: 700;
 }
 
 .input-box{
@@ -135,7 +137,7 @@ a{
   width: 100%;
   height: 40px;
   border-bottom: 2px solid black;
-  margin: 30px 0;
+  margin: 40px 0px;
 
 }
 
@@ -148,6 +150,11 @@ a{
   color: rgb(17, 24, 6);
   font-weight: 500;
   pointer-events: none;
+  transition: .3s;
+}
+
+.input-box input:focus~label, .input-box input:valid~label{
+  top:-5px;
 }
 
 .input-box input{
@@ -156,6 +163,10 @@ a{
   background: transparent;
   border:none;
   outline: none;
+  font-size: 1em;
+  color: aliceblue;
+  font-weight: 400;
+  padding: 0 35px 0 5px;
 }
 
 .input-box .icon{
@@ -163,5 +174,59 @@ a{
   right: 8px;
   font-size: 1.2em;
   color:greenyellow;
-  line-height: 58px;
+  line-height: 40px;
+}
+
+.remember-forgot{
+  font-size: 0.95em;
+    color:white;
+  font-weight: 400;
+  margin: -30px 0 15px;
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.remember-forgot label input{
+  margin-right: 5px;
+}
+
+.remember-forgot a{
+  text-decoration: none;
+  
+}
+
+.remember-forgot a:hover{
+  text-decoration: underline;
+  
+}
+
+.btn {
+  width: 65%; /* Button's width */
+  height: 40px;
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0 auto; /* Centers the button horizontally */
+  margin-top: 40px;
+  display: block; /* Ensures margin auto works */
+  background: linear-gradient(
+    to bottom,
+    rgba(2, 63, 2, 0.703),
+    rgba(0, 128, 0, 0.632)
+  );
+  border: none;
+  border-radius: 15px;
+  outline: none;
+  transition: .3s;
+}
+.btn:hover{
+  background: #000;
+  color:white;
+  transform: scale(1.06);
+}
+.login-register{
+  font-size: .9em;
+  color:white;
+  text-align: center;
+  margin: 50px 0 10px;
 }

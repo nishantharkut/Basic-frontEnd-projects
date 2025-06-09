@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>DOM Model</title>
+  </head>
+  <body onload="alert('welcome to our website')">
+    <h1>This is the website for learning DOM Model</h1>
+    <p>
+      The DOM (Document Object Model) is a programming interface for web
+      documents. It represents the structure of a document as a tree of objects,
+      allowing scripts to manipulate the content, structure, and style of a web
+      page.
+    </p>
+    <ul>
+      <li>the first type of adding js to the website is <em>inline</em></li>
+      <li>the second way is to add inside the script tag</li>
+      <li>
+        the third way is to create another file index.js and add there and link
+        using the script "src"
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Selecting HTML Elements with JavaScript</h2>
+
+    <p>
+      Welcome back. In the previous lesson, we used JavaScript to select HTML
+      elements and change their <code>color</code> property. I demonstrated one
+      way of doing this using the method <code>querySelector()</code>, but there
+      are actually many more ways to select elements in the DOM.
+    </p>
+
+    <p>
+      I have added a few classes and IDs to our current web page so we can try
+      out different ways of selecting elements inside the DOM.
+    </p>
+
+    <h3>Selecting Elements by Tag Name</h3>
+    <p>
+      The first method I want to show you is <code>getElementsByTagName()</code>.
+      This method searches the web page for elements with a particular tag name.
+      For example, if we want to get list items (<code>li</code>), and we have
+      three list items inside an unordered list (<code>ul</code>), running
+      <code>getElementsByTagName("li")</code> returns an array containing all
+      three list items.
+    </p>
+
+    <p>
+      Expanding this array shows that each list item has many properties you can
+      manipulate. The important distinction with this method, compared to
+      <code>querySelector()</code>, is that the word "Elements" is plural,
+      meaning it fetches all elements with the specified tag name, not just one.
+    </p>
+
+    <p>
+      When manipulating one of these elements, for example the third list item,
+      you must select the item from the array using square brackets and the
+      appropriate index. For instance, to select the third item, use index
+      <code>2</code>. Then setting <code>style.color = "purple"</code> changes the
+      third list item's text color to purple.
+    </p>
+
+    <p>
+      In addition to selecting individual elements, you can use array properties
+      such as <code>.length</code> to find out how many elements have a
+      particular tag name. For example,
+      <code>getElementsByTagName("li").length</code> returns 3.
+    </p>
+
+    <h3>Selecting Elements by Class Name</h3>
+    <p>
+      Similar to <code>getElementsByTagName()</code>, there is
+      <code>getElementsByClassName()</code>, which selects elements based on
+      their class name. For example, if a button element has a class of
+      <code>btn</code>, you can select it with
+      <code>document.getElementsByClassName("btn")</code>. This method also
+      returns an array, even if only one element has that class.
+    </p>
+
+    <p>
+      Therefore, to manipulate the element, you must select the first item in the
+      array using index <code>0</code>. Directly setting properties on the array
+      will not work.
+    </p>
+
+    <h3>Selecting Elements by ID</h3>
+    <p>
+      The method <code>getElementById()</code> differs because it returns a
+      single element rather than an array. This is because IDs should be unique
+      on a page. For example, selecting the element with ID <code>title</code>
+      returns the single corresponding element. You can then change its content
+      by setting <code>innerHTML</code>.
+    </p>
+
+    <p>
+      For example, changing the inner HTML of the element with ID
+      <code>title</code> from "Hello" to "Good Bye" updates the displayed text
+      accordingly.
+    </p>
+
+    <h3>Using querySelector and querySelectorAll</h3>
+    <p>
+      Another method to select elements is <code>querySelector()</code>, which
+      returns the first element matching a CSS selector. Unlike
+      <code>getElementById()</code> or <code>getElementsByClassName()</code>, you
+      can specify any valid CSS selector string, such as tag names, classes, or
+      IDs.
+    </p>
+
+    <p>
+      CSS selectors are the patterns used in CSS to select elements to style. To
+      select by class, prefix the name with a dot (<code>.</code>), and by ID
+      with a hash (<code>#</code>).
+    </p>
+
+    <p>
+      With <code>querySelector()</code>, you can combine selectors to target
+      specific elements. For example, to select an anchor tag inside a list item,
+      use <code>li a</code>. To select a list item with class
+      <code>item</code>, write <code>li.item</code>.
+    </p>
+
+    <p>
+      When a selector matches multiple elements, <code>querySelector()</code>
+      returns only the first one. To get all matching elements, use
+      <code>querySelectorAll()</code> and access elements by index.
+    </p>
+
+    <h3>Choosing the Right Method</h3>
+    <p>
+      <code>querySelector()</code> and <code>querySelectorAll()</code> allow
+      complex queries, combining IDs, classes, and tags. In practice, you will
+      often use <code>querySelector()</code> as it's powerful and flexible.
+    </p>
+
+    <h3>Practical Challenge</h3>
+    <p>
+      Try changing the text color of the Google link on the page. Use
+      <code>querySelector("li a")</code> and set
+      <code>style.color = "red"</code>.
+    </p>
+
+    <!-- Example list to try the challenge -->
+    <hr />
+<h1 id="title">Hello</h1>
+
+<a href="https://www.google.com" target="_blank" class="link">Google</a>
+<input type="checkbox" />
+<button class="btn">Click Me</button>
+
+<ul>
+  <li><a href="https://www.google.com" class="link">Google</a></li>
+  <li class="item">Second</li>
+  <li class="item">Third</li>
+</ul>
+
+    <script src="index.js" charset="UTF-8"></script>
+  </body>
+</html>

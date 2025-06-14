@@ -158,6 +158,37 @@
   <li class="item">Third</li>
 </ul>
 
+
+<p>Difference between innerHTML and textContent:
+  document.querySelectorAll("h1")[1].innerHTML;
+'<strong>This is the test for the difference between inner HTML and textContentTag</strong>'
+document.querySelectorAll("h1")[1].textContent;
+'This is the test for the difference between inner HTML and textContentTag'
+</p>
+
+<h3>How to change the attributes</h3>
+Manipulating HTML Element Attributes
+Now that we have seen how to manipulate the style and the text of an HTML element, the last thing I want to show you is how to manipulate the attributes of any element.
+
+Attributes are all the things that get colored in orange in Atom. For example, class is an attribute, the href for an anchor tag is an attribute, and the src for an image is also an attribute. Everything that goes inside the tag, other than the tag name itself, are attributes.
+
+We have a link that points towards Google, which takes us to the Google search page. Now, what if we decided to point people towards Bing instead?
+
+We can get a list of attributes attached to the element by using document.querySelector("a"), which gets us our first anchor tag that points towards Google. Then, by accessing .attributes, we get a list of all the attributes currently attached to this HTML element.
+
+As you can see, there is only one attribute, which is the href. We can retrieve the current value of that attribute by using .getAttribute(). Notice this method is singular, not plural, so it returns the value of a single attribute. We specify the name of the attribute we want, in this case href, and get back that it currently points towards google.com.
+
+To change this attribute, instead of .getAttribute(), we use .setAttribute(). This method takes two parameters: the first is the attribute you want to change, and the second is what you want to change it to. For example, we can set it to www.bing.com.
+
+Even though the link text still says "Google" because the innerHTML is "Google", if you click on it, it will take you to the new website, Bing.
+
+This is a quick and easy way of getting, setting, and seeing what the attributes are for any element you select in the DOM.
+
+Key Takeaways
+HTML element attributes include properties like class, href, and src that are specified inside the tag.
+You can retrieve all attributes of an element using the .attributes property.
+The .getAttribute() method retrieves the value of a specific attribute.
+The .setAttribute() method updates the value of a specified attribute with two parameters: the attribute name and the new value.
     <script src="index.js" charset="UTF-8"></script>
   </body>
 </html>

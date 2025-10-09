@@ -1,7 +1,9 @@
 import React from 'react'
 
-export default function notesDetailPage() {
+const notesDetailPage = () => {
   return (
     <div>notesDetailPage</div>
   )
 }
+
+export default notesDetailPage
